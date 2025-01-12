@@ -48,15 +48,13 @@ class Benchmark:
 
 
 def main():
-    # Tamaños de matrices
     matrix_sizes = [(50, 50, 50), (100, 100, 100), (800, 800, 800), (1024, 1024, 1024), (2048, 2048, 2048)]
     num_workers = 4
 
-    # Algoritmos
     algorithms = {
-        #"Distributed": distributed_matrix_multiplication,
+        "Distributed": distributed_matrix_multiplication,
         "Basic": multiply_matrices_basic,
-        #"Parallel": multiply_matrices_parallel,
+        "Parallel": multiply_matrices_parallel,
     }
 
     for algo_name, algo in algorithms.items():
